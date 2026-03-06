@@ -4,7 +4,7 @@
   --card:    #101d14;
   --border:  #1a2e1f;
   --accent:  #4ade80;
-  --gold:    #fbbf24;
+  --gold:    #ff6b6b;
   --text:    #d4e8d0;
   --muted:   #5a7a60;
   --pixel:   'Orbitron', sans-serif;
@@ -65,8 +65,8 @@ nav {
   font-weight: 900;
   color: var(--gold);
   letter-spacing: .2em;
-  text-shadow: 0 0 18px rgba(251,191,36,.6),
-               0 0 40px rgba(251,191,36,.2);
+  text-shadow: 0 0 18px rgba(255,107,107,.6),
+               0 0 40px rgba(255,107,107,.2);
 }
 
 .nav-logo::after {
