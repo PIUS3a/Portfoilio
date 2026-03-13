@@ -4,30 +4,323 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pius Das — AI & Data Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <canvas id="starfield"></canvas>
+  <canvas id="shader"></canvas>
+  <div id="progress-bar"></div>
 
-  <nav>
+  <!-- NAVBAR -->
+  <nav id="navbar">
     <span class="nav-logo">PIUS.DEV</span>
     <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="hamburger" id="hamburger">☰</button>
   </nav>
 
-  <div class="placeholder">
-    <p>PIUS.DEV — LIVE ✓</p>
-    <span>deploying to github pages...</span>
+  <!-- MOBILE SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose">✕</button>
+    <ul class="sidebar-links">
+      <li><a href="#hero"           class="s-link">Home</a></li>
+      <li><a href="#about"          class="s-link">About</a></li>
+      <li><a href="#skills"         class="s-link">Skills</a></li>
+      <li><a href="#projects"       class="s-link">Projects</a></li>
+      <li><a href="#certifications" class="s-link">Certs</a></li>
+      <li><a href="#contact"        class="s-link">Contact</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <p class="hero-tag">// hello world</p>
+        <h1 class="hero-name">I'm <span>Pius Das</span></h1>
+        <div class="hero-role">
+          <span class="role-prefix">I am a&nbsp;</span>
+          <span class="role-text" id="roleText"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-bio">
+          IT graduate from Mumbai passionate about AI-powered tools,
+          data analytics and building real-world solutions with Python. 🌿
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="https://github.com/PIUS3a" target="_blank" class="btn-secondary">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-ring">
+          <div class="avatar-inner">
+            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=PiusDas&backgroundColor=101d14" alt="Pius Das"/>
+          </div>
+        </div>
+        <div class="avatar-glow"></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">
+      <div class="chevron"></div>
+      <div class="chevron"></div>
+      <div class="chevron"></div>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <div class="section-inner">
+      <p class="section-tag">// about_me</p>
+      <h2 class="section-title">Who Am I</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a recent <span class="hl">Information Technology graduate</span> from
+          Datta Meghe College of Engineering, Navi Mumbai with a strong foundation
+          in Python, Machine Learning and Data Analysis.</p>
+          <p>I build AI-powered applications — from intelligent chatbots to
+          recommendation systems — and I'm currently expanding into
+          <span class="hl">Generative AI and AI Agents</span>.</p>
+          <p>Currently preparing for TCS NQT while sharpening my skills in
+          data analytics and LLM-based tools.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Projects</span></div>
+            <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Certs</span></div>
+            <div class="stat"><span class="stat-num">7.15</span><span class="stat-label">CGPA</span></div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="info-row"><span class="info-label">Name</span><span>Pius Das</span></div>
+          <div class="info-row"><span class="info-label">Location</span><span>Mumbai, India</span></div>
+          <div class="info-row"><span class="info-label">Degree</span><span>B.E. Info Technology</span></div>
+          <div class="info-row"><span class="info-label">Email</span><span>piusdas6@gmail.com</span></div>
+          <div class="info-row"><span class="info-label">Status</span>
+            <span class="status-badge">Open to Work ✦</span></div>
+          <a href="https://www.linkedin.com/in/piusdas-techaspirantdev"
+             target="_blank" class="btn-primary"
+             style="margin-top:1.5rem;display:inline-block;font-size:.55rem;">
+             LinkedIn ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="reveal">
+    <div class="section-inner">
+      <p class="section-tag">// tech_stack</p>
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages & Data</h3>
+          <div class="skill-items">
+            <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>SQL</span></div>
+            <div class="skill-item"><i class="devicon-pandas-plain colored"></i><span>Pandas</span></div>
+            <div class="skill-item"><i class="devicon-numpy-plain colored"></i><span>NumPy</span></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>AI & ML</h3>
+          <div class="skill-items">
+            <div class="skill-item"><i class="devicon-scikitlearn-plain colored"></i><span>Scikit-learn</span></div>
+            <div class="skill-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+            <div class="skill-item"><span class="icon-text">🤖</span><span>LLM / GenAI</span></div>
+            <div class="skill-item"><span class="icon-text">🔗</span><span>LangChain</span></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Dev</h3>
+          <div class="skill-items">
+            <div class="skill-item"><i class="devicon-flask-original colored"></i><span>Flask</span></div>
+            <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="skill-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+            <div class="skill-item"><i class="devicon-jupyter-plain colored"></i><span>Jupyter</span></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Concepts</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="icon-text">⚙️</span><span>OOP</span></div>
+            <div class="skill-item"><span class="icon-text">🗄️</span><span>DBMS</span></div>
+            <div class="skill-item"><span class="icon-text">⛏️</span><span>Data Mining</span></div>
+            <div class="skill-item"><span class="icon-text">📊</span><span>Analytics</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="reveal">
+    <div class="section-inner">
+      <p class="section-tag">// my_work</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Movie Recommendation"/>
+            <div class="project-overlay">
+              <a href="https://github.com/PIUS3a" target="_blank" class="overlay-btn">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>NLP</span><span>Streamlit</span><span>ML</span></div>
+            <h3>Movie Recommendation System</h3>
+            <p>Content-based recommender using TF-IDF vectorization and cosine similarity on TMDB dataset with NLP lemmatization.</p>
+            <a href="https://github.com/PIUS3a" target="_blank" class="project-link">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=600&q=80" alt="Web Chat App"/>
+            <div class="project-overlay">
+              <a href="https://github.com/PIUS3a" target="_blank" class="overlay-btn">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Flask</span><span>WebSocket</span><span>Gemini</span></div>
+            <h3>Secure AI Messenger</h3>
+            <p>Local AI chat web app using Flask, Socket.IO and SQLite. Features Email OTP login, real-time messaging and Gemini API integration.</p>
+            <a href="https://github.com/PIUS3a" target="_blank" class="project-link">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Expense Tracker"/>
+            <div class="project-overlay">
+              <a href="https://github.com/PIUS3a" target="_blank" class="overlay-btn">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Charts</span></div>
+            <h3>Expense Tracker</h3>
+            <p>Data-driven expense analyzer built with Python and Streamlit. Visualizes spending patterns with interactive charts and category breakdowns.</p>
+            <a href="https://github.com/PIUS3a" target="_blank" class="project-link">View on GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="reveal">
+    <div class="section-inner">
+      <p class="section-tag">// achievements</p>
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs-grid">
+
+        <div class="cert-card">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-body">
+            <h3>AI & ML Internship</h3>
+            <p class="cert-issuer">AICTE</p>
+            <p class="cert-desc">Hands-on internship certification in Artificial Intelligence and Machine Learning fundamentals.</p>
+            <span class="cert-badge">AI & ML</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🥇</div>
+          <div class="cert-body">
+            <h3>SQL Basic Badge</h3>
+            <p class="cert-issuer">HackerRank</p>
+            <p class="cert-desc">Verified proficiency in SQL queries, joins, aggregations and database operations.</p>
+            <a href="#" class="cert-badge">View Badge ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-body">
+            <h3>Data Analytics Master Programme</h3>
+            <p class="cert-issuer">Coursera — Pursuing</p>
+            <p class="cert-desc">Comprehensive programme covering data analysis, visualization, Python and business intelligence.</p>
+            <span class="cert-badge pursuing">In Progress</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-body">
+            <h3>AI Agents Course</h3>
+            <p class="cert-issuer">Coursera — Pursuing</p>
+            <p class="cert-desc">Advanced course on building AI agents using LangChain, LangGraph and modern LLM frameworks.</p>
+            <span class="cert-badge pursuing">In Progress</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <div class="section-inner">
+      <p class="section-tag">// get_in_touch</p>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-wrapper">
+        <div class="contact-text">
+          <p>Open to work, collaborations and interesting projects.<br/>
+          Feel free to reach out — I respond within 24 hours. 🌿</p>
+          <div class="contact-links">
+            <a href="mailto:piusdas6@gmail.com" class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>piusdas6@gmail.com</span>
+            </a>
+            <a href="https://github.com/PIUS3a" target="_blank" class="contact-item">
+              <i class="devicon-github-original"></i>
+              <span>github.com/PIUS3a</span>
+            </a>
+            <a href="https://www.linkedin.com/in/piusdas-techaspirantdev" target="_blank" class="contact-item">
+              <i class="devicon-linkedin-plain colored"></i>
+              <span>linkedin.com/in/piusdas-techaspirantdev</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <a href="mailto:piusdas6@gmail.com" class="btn-primary" style="font-size:.65rem;padding:1.2rem 2.5rem;">
+            Say Hello ✉
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Built with 💚 by <span>Pius Das</span> · Deployed on GitHub Pages</p>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="back-top" aria-label="Back to top">↑</button>
+
+  <!-- FLOATING SOCIAL BAR -->
+  <div class="float-social">
+    <a href="https://github.com/PIUS3a" target="_blank" title="GitHub">
+      <i class="devicon-github-original"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/piusdas-techaspirantdev" target="_blank" title="LinkedIn">
+      <i class="devicon-linkedin-plain colored"></i>
+    </a>
+    <a href="mailto:piusdas6@gmail.com" title="Email">✉</a>
+    <div class="float-line"></div>
   </div>
 
   <script src="script.js"></script>
-
 </body>
 </html>
